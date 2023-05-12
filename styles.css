@@ -36,4 +36,11 @@
   }
   
  
-  
+  /* footer copyright section */
+  footer {
+    background-color: white;
+    color: #777;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+  }
