@@ -1,4 +1,47 @@
 
+/* hero section */
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 50px;
+  text-align: center;
+  
+}
+
+.hero-text-name {
+  background-color: #fde191;  
+  color : black;
+  text-decoration: none;
+}
+
+.hero-text-name a:hover {
+  background-color: transparent;
+  color : black;
+}
+
+.hero-image {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
 
   /* let's connect section */
   .lets-connect {
