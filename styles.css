@@ -72,6 +72,7 @@
     line-height: 45px;
     text-align: center;
     transition: background-color 0.3s;
+    text-decoration: none;
   }
   
   .social-links a:hover {
@@ -81,9 +82,27 @@
  
   /* footer copyright section */
   footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+  }
+
+  .made_with {
     background-color: white;
-    color: #777;
-    padding: 15px;
+    color: black;
+    padding: 20px;
     text-align: center;
     font-size: 14px;
+    width: 100%;
+    padding-bottom: 0px;
+  }
+
+  .copyright {
+    background-color: white;
+    color: #777;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    padding-top: 0px;
   }
