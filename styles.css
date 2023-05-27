@@ -150,7 +150,7 @@ nav {
   height: auto;
 }
 
-/* Skills section */
+/* skills section */
 .skills {
   display: flex;
   flex-direction: column;
@@ -162,7 +162,7 @@ nav {
 .skills h2 {
   font-size: 32px;
   text-align: center;
-  padding: 30px;
+  padding-bottom: 40px;
 }
 
 .skills-logo {
@@ -192,6 +192,67 @@ nav {
 }
 
 
+/* projects section */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 50px;
+}
+
+.project-cards {
+  flex-basis: calc(33.33% - 20px);
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+} 
+
+.project-img {
+  width :100%;
+  height: auto;
+  /* height: 40vh; */
+  object-fit: cover;
+  border: 2px solid #ddd;
+  padding: 10px;
+}
+
+.project-info {
+  padding: 10px;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.project-links a {
+  margin-right: 10px;
+  background-color: white;
+  color: black;
+  border: 1px solid #fde191;
+  padding: 2px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.project-links a:hover, a:active {
+  background-color: #fde191;
+  
+}
+
+
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .project-cards {
+    flex-basis: 100%;
+  }
+}
 
 
 
