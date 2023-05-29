@@ -21,7 +21,7 @@ h1 {
 h2 {
   font-size: 32px;
   text-align: center;
-  padding-top: 40px;
+  padding: 40px;
 }
 
 /* header / navbar */
@@ -290,43 +290,27 @@ nav {
 }
 
 
-
 /* let's connect section */
 .lets-connect {
   background-color: #f2f2f2;
-  padding: 50px 20px;
   text-align: center;
+  padding-bottom: 20px;
 }
-  
-.lets-connect h2 {
-  font-size: 32px;
+
+.lets-connect p {
   margin-bottom: 20px;
 }
-  
-.lets-connect p {
-  font-size: 16px;
-  margin-bottom: 40px;
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
 }
-  
-.social-links a {
-  display: inline-block;
-  width: 45px;
-  height: 45px;
-  margin-right: 10px;
-  border-radius: 50%;
-  font-size: 25px;
-  color: #fff;
-  background-color: #333;
-  line-height: 45px;
-  text-align: center;
-  transition: background-color 0.3s;
-  text-decoration: none;
+
+.social-links li {
+  margin-right: 20px;
 }
-  
-.social-links a:hover {
-  background-color: #777;
-}
-  
+
  
 /* footer copyright section */
 .footer-section {
