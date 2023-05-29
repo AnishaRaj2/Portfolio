@@ -251,10 +251,32 @@ nav {
 }
 
 /* Media query for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .project-cards {
     flex-basis: 100%;
     /* height :650px;  */ /* setting card height for mobile view */
+  }
+}
+
+
+/* about me section */
+
+.about-me-img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-me p {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-me-img {
+    max-width: 80%; 
   }
 }
 
