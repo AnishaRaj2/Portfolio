@@ -6,9 +6,11 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  /* font-family: 'Raleway', sans-serif; */
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
@@ -215,7 +217,7 @@ nav {
   margin: 50px;
 }
 
-.project-cards {
+.project-card {
   flex-basis: calc(33.33% - 20px);
   max-width: 400px;
   width: 100%;
@@ -245,7 +247,7 @@ nav {
 }
 
 .project-links a {
-  margin-right: 10px;
+  margin-right: 5px;
   background-color: white;
   color: black;
   /* border: 1px solid #fde191; */
@@ -261,7 +263,7 @@ nav {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .project-cards {
+  .project-card {
     flex-basis: 100%;
     /* height :650px;  */ /* setting card height for mobile view */
   }
@@ -269,6 +271,9 @@ nav {
 
 
 /* about me section */
+.about-me {
+  margin: 30px 150px;
+}
 .about-me-img {
   width: 100%;
   max-width: 900px;
@@ -278,15 +283,45 @@ nav {
   padding: 20px;
 }
 
-.about-me p {
-  padding: 10px;
+.about-me-text p {
+  padding-bottom: 20px;
+}
+.about-me-text {
+  padding-bottom: 30px;
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .about-me-img {
-    max-width: 80%; 
+    max-width: 90%; 
   }
+
+  .about-me {
+    margin: 30px 30px;
+  }
+}
+
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+  padding: 10px 16px;
+  font-size: 16px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.resume-button:hover {
+  background-color: #fde191;
+}
+
+.resume-button img {
+  margin-right: 8px;
+}
+
+.resume-button-text {
+  font-weight: bold;
 }
 
 
@@ -317,7 +352,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 100%;
+  margin: 0px 30px;
 }
 
 .footer-section a {
@@ -346,9 +381,8 @@ nav {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
+ .footer-section {
+    margin: 0px 10px;
   }
 
   .made-with, .copyright {
