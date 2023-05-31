@@ -233,7 +233,7 @@ nav {
   height: 300px;
   /* height: 40vh; */
   object-fit: contain;
-  border: 2px solid #ddd;
+  border: 1px solid #ddd;
   padding: 10px;
 }
 
@@ -259,8 +259,24 @@ nav {
 }
 
 .project-links a:hover, a:active {
-  background-color: #fde191;  
+  color: #ffc832;  
 }
+
+.project-info p {
+  font-size: 16px;
+  letter-spacing: 0.3px;
+}
+
+.project-tech {
+  margin-top: 10px;
+  border-top: 0.5px solid #ddd;
+}
+
+.project-tech p {
+  margin-top: 10px;
+  color: #888;
+}
+
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
