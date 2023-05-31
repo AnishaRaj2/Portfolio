@@ -12,6 +12,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 1.6;
+  letter-spacing: 0.5px;
 }
 
 h1 {
@@ -276,7 +277,7 @@ nav {
 }
 .about-me-img {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -290,14 +291,28 @@ nav {
   padding-bottom: 30px;
 }
 
+.text-highlight {
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 1.5px #c7c7c2;
+}
+
+/* other text highlighting I tried and like. Keeping the code for future use */
+/* @keyframes highlight {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }}
+.text-highlight {
+  animation: highlight 3s infinite;  
+} */
+
 /* Media query for mobile devices */
 @media (max-width: 768px) {
   .about-me-img {
-    max-width: 90%; 
+    max-width: 100%; 
   }
 
-  .about-me {
-    margin: 30px 30px;
+  .about-me, .resume-button {
+    margin: 20px 15px;
   }
 }
 
@@ -342,8 +357,20 @@ nav {
   justify-content: center;
 }
 
-.social-links li {
+.social-icon {
   margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  p{
+    margin: 0px 15px;
+  }
 }
 
  
@@ -360,7 +387,6 @@ nav {
 }
 
 .made-with {
-  background-color: white;
   color: black;
   padding: 20px;
   text-align: left;
@@ -370,7 +396,6 @@ nav {
 }
 
 .copyright {
-  background-color: white;
   color: #777;
   padding: 20px;
   text-align: right;
