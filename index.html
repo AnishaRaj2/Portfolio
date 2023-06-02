@@ -11,14 +11,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <!--Poppins google font link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-    <!--Raleway google font link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <!--Ubuntu google font link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,45 +27,24 @@
   <header>  
     <!--header / navbar-->
     <nav>
-      <div class="logo">Logo</div>      
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
+      <div class="logo">
+        <a href="#home">
+          <img src="images/logo.png" alt="Logo">
+        </a>        
+      </div>           
+      <ul class="nav-links"> 
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="mailto:mail.anisha.raj@gmail.com">Contact</a></li>
-      </ul>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="documents/Resume.pdf" target="_blank">Résumé</a></li>
+      </ul>      
       <div class="hamburger">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
     </nav>
-    
-    <!-- moile navbar
-    <nav class="nav_mobile"> 
-      <h1>Logo</h1>
-      <button onclick="toggleMenu()">X</button>      
-    </nav>
-    <div id="dropdown_menu" class="hide">
-          <button>Home</button>
-      <button>Skills</button>
-    </div>
-
-
-    Web navbar
-    <nav class="nav_web"> 
-      <div>
-        <p>Logo</p>
-      </div>
-      <div class="menu">
-        <button>Home</button>
-        <button>Skills</button>
-        <button>Home</button>
-        <button>Home</button>
-      </div>    
-    </nav> -->
-
   </header>  
   
   <!-- hero section -->
@@ -94,11 +65,12 @@
       <p>
         I've put together this portfolio to showcase some of my skills. It's built entirely with HTML, CSS, and vanilla JavaScript. Purposefully framework-free, as I wanted to challenge myself and sharpen my programming abilities. Feel free to explore and get a glimpse of my work!
       </p>
-    </div>
+    </div>    
   </section>
 
+
   <!-- skills section -->
-  <section class="skills">
+  <section class="skills" id="skills">
     <h2>Skills</h2>
     <div class="skills-logo">
       <!--HTML Logo-->
@@ -180,7 +152,7 @@
   </section>
 
   <!--project section-->
-  <section>
+  <section id="projects">
     <h2>These are some of my projects</h2>
     <div class="projects">
       <div class="project-card">
@@ -277,32 +249,25 @@
   </section>
 
   <!-- about me section -->  
-  <section class="about-me">
+  <section class="about-me" id="about">
     <h2>A little about myself</h2>
     <div >
       <img class="about-me-img" src="images/about-me.jpg" alt="picture of anisha" />
       <div class="about-me-text">
-        <p><b>
-          I am a Web/Front-end developer based in Helsinki, Finland.
-        </b></p>
         <p>
-          I enjoy coding, designing, and capturing the beauty of nature through photography.
+          I am a Web/Front-end developer based in Helsinki, Finland.
         </p>
         <p>
-          I am curious, creative and collaborative person, who loves to solve logical puzzles and find bugs 
-          in UI designs. I am a very detail-oriented person with a service design mindset. I am always striving 
-          to step out of my comfort zone, to explore and expand my knowledge and skills. Besides programming, 
-          I am also interested in UX/UI Design and photography.
+          I am curious, creative and collaborative person, who loves to solve logical puzzles and hunt for bugs in UI designs. I am a very detail-oriented person with a service design mindset. I am always striving to step out of my comfort zone, to explore and expand my knowledge and skills. 
         </p>
         <p class="text-highlight"><i>
-          "I believe that value is created together and through the integration of creative design and technology, we can develop 
-          products that are intuitive, practical, and accessible to all."
+          "I believe that value is created together and through the integration of creative design and technology, we can develop products that are intuitive, practical, and accessible to all."
         </i></p>
         <p>
-          I'm a self taught developer and have learnt a lot of the processes, concepts and theories of UX/UI 
-          and product design through attending workshops, reading blogs, taking online courses like Fiteach, 
-          Helsinki university MOOC courses, etc and applying these to projects in my 
-          spare time and at work.
+          I'm a self taught developer and have learnt a lot of the processes, concepts and theories of UX/UI and product design through attending workshops, reading blogs, taking online courses like Fitech, Helsinki university MOOC courses, etc and applying these to projects in my spare time and at work.
+        </p>
+        <p>
+          When I am not coding or designing, you will find me in between Finnish nature "Luonto", relaxing and energizing myself or relaxing at home with my family. I also enjoy capturing the beauty of nature through photography and exploring the mind-body-food connection.
         </p>
         </div>
     </div>
@@ -313,7 +278,7 @@
   </section>
 
   <!-- let's connect section-->
-  <section class="lets-connect" >
+  <section class="lets-connect" id="contact">
     <h2>Let's Connect</h2>
     <p>Feel free to reach out for opportunities or just a friendly Hello!!</p>
     <ul class="social-links">
