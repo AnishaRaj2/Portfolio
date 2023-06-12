@@ -22,7 +22,7 @@ h2 {
   font-size: 32px;
   text-align: center;
   padding: 40px;
-  letter-spacing: 3px;
+  letter-spacing: 3px;  
 }
 
 /* header / navbar */
@@ -61,10 +61,20 @@ nav {
   color: black;
   padding: 10px;
   transition: color 0.3s ease;
- }
+}
 
- .nav-links a:hover {
-  color: #fdb813;
+.nav-links a:hover {
+  background: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.resume {
+  padding: 10px 20px;
+  border: 3px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%); 
 }
 
 .hamburger {
@@ -147,6 +157,7 @@ nav {
 #home {
   padding: 100px 0px;
 }
+
 .hero-section {
   display: flex;
   justify-content: space-between;
@@ -165,14 +176,14 @@ nav {
 .hero-text-name {
   font-size: 90px;
   background: rgb(249,186,56);
-  background: linear-gradient(53deg, rgba(249,186,56,1) 20%, rgba(250,122,75,1) 64%, rgba(255,86,93,1) 90%); 
+  background: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 3s ease-in-out infinite;
-  background-size: 200% auto;
+  animation: gradientAnimation 3s ease infinite;
+  background-size: 300% auto;
   background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  /* -webkit-background-clip: text; */
+  /* color: transparent; */
 }
 
 @keyframes gradientAnimation {
@@ -189,11 +200,12 @@ nav {
 
 .hero-text {
   flex: 2;
-  margin-right: 50px;
+  margin-right: 120px;
 }
 
 .special {
   font-weight: bold;
+  font-size: 20px; 
 }
 
 .hero-image {
@@ -208,7 +220,7 @@ nav {
 
 .hero-text p:not(:last-child) {
   margin-top: 40px;
-  margin-bottom: 150px; /* vertical gap between both <p> */
+  margin-bottom: 150px; /* vertical gap between both <p> */  
 }
 
 .hero-text h1 {
@@ -265,19 +277,23 @@ nav {
   }
 
   .hero-section {
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
+    text-align: center;    
     margin: 0 15px;
   }
   
   .hero-text h1 {    
     display: flex;
+    justify-content: center;
     line-height: 1.1;
     margin: 15px;
   }
 
   .hero-text p {
-    text-align: left;
+    text-align: center;
+    /* margin: 15px; */
   }
   
   .hero-image img {
@@ -287,7 +303,7 @@ nav {
   }
 
   .hero-text p:not(:last-child) {
-    margin-top: 70px;
+    /* margin-top: 70px; */
     margin-bottom: 60px; /* vertical gap */
   }
 }
@@ -297,7 +313,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   padding: 30px;
 }
 
@@ -316,7 +332,6 @@ nav {
 
 .logo-title {
   font-size: 15px;
-  font-weight: bolder;
   position: absolute;
   top: -40px; 
 }
@@ -389,7 +404,7 @@ nav {
 }
 
 .project-info p {
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.3px;
 }
 
@@ -484,7 +499,7 @@ nav {
 
 /* let's connect section */
 .lets-connect {
-  background-color: #f2f2f2;
+  background-color: #fafafa;
   text-align: center;
   padding-bottom: 20px;
 }
