@@ -1,8 +1,15 @@
+:root {
+  --gradient: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%);
+}
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,7 +29,8 @@ h2 {
   font-size: 32px;
   text-align: center;
   padding: 40px;
-  letter-spacing: 3px;  
+  letter-spacing: 3px;
+  scroll-margin-top: 150px;  
 }
 
 /* header / navbar */
@@ -50,13 +58,13 @@ nav {
   justify-content: space-around;
   width: 35%;  
   margin-left: auto;
-  padding-right: 150px;
+  padding-right: 200px;
 }
 
 .nav-links a {
   text-decoration: none;
   letter-spacing: 2px;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 20px;
   color: black;
   padding: 10px;
@@ -64,17 +72,17 @@ nav {
 }
 
 .nav-links a:hover {
-  background: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%);
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .resume {
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   border: 3px solid;
   border-image-slice: 1;
-  border-image-source: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%); 
+  border-image-source: var(--gradient);
 }
 
 .hamburger {
@@ -155,7 +163,7 @@ nav {
 
 /* hero section */
 #home {
-  padding: 100px 0px;
+  padding: 150px 100px;
 }
 
 .hero-section {
@@ -174,9 +182,9 @@ nav {
 }
 
 .hero-text-name {
-  font-size: 90px;
+  font-size: 100px;
   background: rgb(249,186,56);
-  background: linear-gradient(45deg, rgba(249,186,56,1) 30%, rgba(250,122,75,1) 70%, rgba(255,86,93,1) 90%); 
+  background: var(--gradient); 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 3s ease infinite;
@@ -185,6 +193,7 @@ nav {
   /* -webkit-background-clip: text; */
   /* color: transparent; */
 }
+
 
 @keyframes gradientAnimation {
   0% {
@@ -208,7 +217,7 @@ nav {
   font-size: 20px; 
 }
 
-.hero-image {
+/* .hero-image {
   flex: 1;
   text-align: right;
 }
@@ -216,6 +225,10 @@ nav {
 .hero-image img {
   width: 350px;
   height: auto;
+} */
+
+.hero-text p {
+  max-width: 80ch;
 }
 
 .hero-text p:not(:last-child) {
@@ -240,13 +253,13 @@ nav {
   animation-delay: 0.5s;
 }
 
-.hero-image {
+/* .hero-image {
   flex: 1;
   text-align: right;
   opacity: 0;
   animation: slideFromRight 1s forwards;
-  /* animation-delay: 0.5s; */
-}
+ 
+} */
 
 @keyframes slideFromTop {
   from {
@@ -259,7 +272,7 @@ nav {
   }
 }
 
-@keyframes slideFromRight {
+/* @keyframes slideFromRight {
   from {
     transform: translateX(100%);
     opacity: 0;
@@ -268,7 +281,7 @@ nav {
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
@@ -292,15 +305,21 @@ nav {
   }
 
   .hero-text p {
-    text-align: center;
+    padding: 20px;
+    text-align: left;
     /* margin: 15px; */
+    margin-right: 15px;
+  }
+  .hero-text {    
+    margin-right: 15px;
   }
   
-  .hero-image img {
+  
+  /* .hero-image img {
     margin-top: 50px;
     width: 250px;
     height: auto;
-  }
+  } */
 
   .hero-text p:not(:last-child) {
     /* margin-top: 70px; */
@@ -308,39 +327,116 @@ nav {
   }
 }
 
+
 /* skills section */
 .skills {
+  display: flex;  
+  justify-content: space-around;
+  margin: 0px 300px 100px;
+  padding: 40px 50px 50px 50px;  
+}
+
+.skills-img {
+  max-width: 300px;
+  height: auto;
+  align-self: flex-start;
+}
+
+/* .skills-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+.skills-img-container {
+  max-width: 300px;
+  min-width: 100px;
+  width: 100%;
+  margin: 0 auto;
+} */
+
+.skills-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fafafa;
-  padding: 30px;
+  justify-content: space-around;
+  padding: 0px 50px 50px 50px;
 }
 
 .skills-logo {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 50px;
-  margin-top: 30px; 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;  
+  padding: 0px 80px 0px 30px;
+  gap: 10px;
 }
 
 .logo-container {
+  display: flex;
+  align-items: center;
   text-align: center;
-  position: relative;
-  padding-bottom: 50px;
+  
+  border-width: 0.5px;
+  border-style: solid;
+  padding: 4px 8px;
 }
 
 .logo-title {
   font-size: 15px;
-  position: absolute;
-  top: -40px; 
+  margin-left: 5px;
+}
+
+.skills-text {
+  padding: 0 80px 0px 30px;
+}
+
+.skills-text-special {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.skills-text-special:hover {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Media query for mobile devices */
 @media screen and (max-width: 768px) {
-  .skills-logo {
-    grid-template-columns: repeat(3, 1fr);
+  .skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;    
+    margin: 0 15px;
+    padding: 0px;
   }
+
+  .skills-img {
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  
+  .skills-container {
+    padding: 0px;
+  }
+
+  .skills-logo {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px;
+    /* justify-content: center; */
+  }
+
+  .skills-text {
+    text-align: left;
+    padding: 0px;
+    margin-top: 50px;
+  } 
 }
 
 
@@ -350,18 +446,21 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  margin: 50px;
+  margin: 50px 150px;
 }
 
 .project-card {
   flex-basis: calc(33.33% - 20px);
-  max-width: 400px;
+  max-width: 320px;
   width: 100%;
   /* height: 700px;  */ /* makes height of all cards same in mobile view */
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   overflow: hidden;
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  display: grid;
+  grid-template-rows: min-content auto min-content;
 }
 
 .project-card:hover {
@@ -371,7 +470,7 @@ nav {
 
 .project-img {
   width :100%;
-  height: 300px;
+  height: 200px;
   /* height: 40vh; */
   object-fit: contain;
   border: 1px solid #ddd;
@@ -397,6 +496,7 @@ nav {
   text-align: center;
   text-decoration: none;
   display: inline-block;
+  font-size: 13px;
 }
 
 .project-links a:hover, a:active {
@@ -408,9 +508,19 @@ nav {
   letter-spacing: 0.3px;
 }
 
+.wip{
+  display: inline-block;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .project-tech {
   margin-top: 10px;
   border-top: 0.5px solid #ddd;
+  padding: 10px;
+  padding-top: 0;
 }
 
 .project-tech p {
@@ -421,6 +531,10 @@ nav {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+  .projects {
+    margin: 50px;
+  }
+
   .project-card {
     flex-basis: 100%;
     /* height :650px;  */ /* setting card height for mobile view */
@@ -430,11 +544,14 @@ nav {
 
 /* about me section */
 .about-me {
-  margin: 30px 150px;
+  margin: 150px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about-me-img {
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -446,6 +563,7 @@ nav {
 }
 .about-me-text {
   padding-bottom: 30px;
+  max-width: 80ch;
 }
 
 .text-highlight {
@@ -501,11 +619,11 @@ nav {
 .lets-connect {
   background-color: #fafafa;
   text-align: center;
-  padding-bottom: 20px;
+  padding: 80px;
 }
 
 .lets-connect p {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .social-links {
@@ -525,8 +643,12 @@ nav {
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
-  p{
-    margin: 0px 15px;
+  .lets-connect {
+    padding: 20px 0px;
+  }
+
+  .lets-connect p{
+    margin: 0px 15px 20px;
   }
 }
 
@@ -536,7 +658,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 0px 30px;
+  margin: 30px 80px;
+  padding: 20px;
 }
 
 .footer-section a {
@@ -545,30 +668,27 @@ nav {
 
 .made-with {
   color: black;
-  padding: 20px;
   text-align: left;
   font-size: 14px;
   flex-basis: 50%;
-  margin-bottom: 0;
 }
 
 .copyright {
   color: #777;
-  padding: 20px;
   text-align: right;
   font-size: 14px;
   flex-basis: 50%;
-  margin-bottom: 0; 
 }
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
  .footer-section {
-    margin: 0px 10px;
+    margin: 10px 10px;
   }
 
   .made-with, .copyright {
     flex-basis: 100%;
     text-align: center;
+    padding: 10px;
   }
 }
