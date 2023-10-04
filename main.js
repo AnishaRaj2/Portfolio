@@ -38,7 +38,7 @@ const smoothScroll = () => {
             const targetId = link.getAttribute('href');
   
             // Check if the link is the resume link
-            if (targetId === 'documents/Resume.pdf') {
+            if (targetId === 'documents/AnishaRajCV.pdf') {
                 return; // Skip smooth scroll for the resume link
             }
   
